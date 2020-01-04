@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head>
     <!--
@@ -13,17 +13,41 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <title>MovieStreamApp</title>
+        <!-- Font Awesome Icons -->
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <!-- Google Fonts -->
+        <link href="css/index.css" rel="stylesheet">
+        
+        <script src="vendor/jquery/jquery.min.js"></script>
+        
+       
+        <link href="css/creative.css" rel="stylesheet">
+        <script src="js/angular.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <script src="scripts/index.js"></script>
+        <script src="vendor/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
     </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+
+    <body id="page-top">
+        <!-- Navigation -->
+        <div ng-app="myApp" ng-controller="mainPageCtrl" ng-init="init()" style="font-family: 'Segoe UI';padding : 30px;">
+            
+            <div style=" display : flex; flex-direction : row; justify-content: center; align-items: center;">
+                <div style="flex-grow : 1; text-align: center;">
+                    <button class="btn-primary" ng-click="changePage('login')">
+                        Login
+                    </button>
+                </div>
+                
+                <div style="flex-grow : 1; text-align: center;">
+                    AAA888 Movie
+                </div>
             </div>
+            <div style="display : flex; padding : 30px; align-items: center; flex-direction: column;" >
+                <div style= "padding : 10px;"><button class="btn-primary" ng-click="changePage('membership')">Membership</button></div>
+                <div style= "padding : 10px;"><button class="btn-primary" ng-click="changePage('movies')">Movies</button></div>
+            </div>  
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-        <script type="text/javascript" src="scripts/index.js"></script>
     </body>
 </html>

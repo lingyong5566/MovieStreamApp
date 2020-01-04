@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>MovieStreamApp</title>
+        <!-- Font Awesome Icons -->
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <!-- Google Fonts -->
+        <link href="css/index.css" rel="stylesheet">
+        
+        <script src="vendor/jquery/jquery.min.js"></script>
+        
+       
+        <link href="css/creative.css" rel="stylesheet">
+        <script src="js/angular.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <script src="scripts/movies.js"></script>
+        <script src="vendor/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+    </head>
+
+    <body id="page-top">
+        <!-- Navigation -->
+        <div ng-app="myApp" ng-controller="mainPageCtrl" ng-init="init()" style="font-family: 'Segoe UI';padding : 30px;">
+            
+            <div style="display : flex; padding : 30px; align-items: center; flex-direction: column; overflow-y : auto;" >
+                <div ng-repeat="movie in movies" style="padding : 20px;">
+                    <div>
+                        {{ movie.name }}
+                    </div>
+                    <div>
+                        <img ng-src="images/{{movie.image}}" width="200px" height="400px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
